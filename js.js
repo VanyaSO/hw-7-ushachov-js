@@ -4,7 +4,16 @@
 // 3) с помощью промта спрашиваем у пользователя второе число.
 // 4) С помощью alert или console.log выводим результат действия (add, sub, mult, div) со всеми операндами (Н-р "2 + 3 = 5" )
 
-let action = prompt('Какое дейсвие вы хотите сделать add, sub, div, mult');
+let action;
+
+do{
+    action = prompt('Какое дейсвие вы хотите сделать add, sub, div, mult');
+
+    if(action !== 'sub' && action !=='add' && action !== 'div' && action !=='mult'){
+        alert('Введите одно из придложеных действий');
+    }
+
+} while(action !== 'sub' && action !=='add' && action !== 'div' && action !=='mult');
 
 let firstNumber = prompt('Введите певрое число');
 let secondNumber = prompt('Введите второе число');
@@ -16,14 +25,18 @@ let multiplicationResult = Number(firstNumber) * Number(secondNumber);
 
 if(action === 'add'){
     alert(`Результат:  ${firstNumber} + ${secondNumber} = ${additionResult}`);
+    location.reload();
 }else if(action === 'sub'){
     alert(`Результат:  ${firstNumber} - ${secondNumber} = ${subtractionResult}`);
+    location.reload();
 }else if(action === 'div'){
     alert(`Результат:  ${firstNumber} : ${secondNumber} = ${divisionResult}`);
+    location.reload();
 }else if(action === 'mult'){
     alert(`Результат:  ${firstNumber} * ${secondNumber} = ${multiplicationResult}`);
+    location.reload();
 } else{
-    alert(`Результат:  ${firstNumber} ? ${secondNumber} = ??? \nВы не указали действие или указали не коректно`);
+    console.log(100);
 }
 
 
