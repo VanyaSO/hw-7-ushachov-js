@@ -3,20 +3,34 @@
 // 2) с помощью промта спрашиваем у пользователя первое число.
 // 3) с помощью промта спрашиваем у пользователя второе число.
 // 4) С помощью alert или console.log выводим результат действия (add, sub, mult, div) со всеми операндами (Н-р "2 + 3 = 5" )
-
+//
 let action;
-
+let firstNumber;
+let secondNumber;
 do{
     action = prompt('Какое дейсвие вы хотите сделать add, sub, div, mult');
-
     if(action !== 'sub' && action !=='add' && action !== 'div' && action !=='mult'){
         alert('Введите одно из придложеных действий');
     }
 
 } while(action !== 'sub' && action !=='add' && action !== 'div' && action !=='mult');
 
-let firstNumber = prompt('Введите певрое число');
-let secondNumber = prompt('Введите второе число');
+do{
+    firstNumber = Number(prompt('Введите певрое число', ''));
+    if ( !parseInt(firstNumber) ){
+        alert('Введите число');
+    }
+
+} while( !parseInt(firstNumber) );
+
+do{
+    secondNumber = Number(prompt('Введите второе число', ''));
+    if ( !parseInt(secondNumber) ){
+        alert('Введите число');
+    }
+
+} while( !parseInt(secondNumber) );
+
 
 let additionResult = Number(firstNumber) + Number(secondNumber);
 let subtractionResult = Number(firstNumber) - Number(secondNumber);
