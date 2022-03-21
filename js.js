@@ -23,7 +23,7 @@ if(action === 'add'){
 }else if(action === 'mult'){
     alert(`Результат:  ${firstNumber} * ${secondNumber} = ${multiplicationResult}`);
 } else{
-    alert(`Результат:  ${firstNumber} * ${secondNumber} = ??? \nВы не указали действие или указали не коректно`);
+    alert(`Результат:  ${firstNumber} ? ${secondNumber} = ??? \nВы не указали действие или указали не коректно`);
 }
 
 
