@@ -38,17 +38,25 @@ let divisionResult = Number(firstNumber) / Number(secondNumber);
 let multiplicationResult = Number(firstNumber) * Number(secondNumber);
 
 if(action === 'add'){
+
     alert(`Результат:  ${firstNumber} + ${secondNumber} = ${additionResult}`);
     location.reload();
+
 }else if(action === 'sub'){
+
     alert(`Результат:  ${firstNumber} - ${secondNumber} = ${subtractionResult}`);
     location.reload();
+
 }else if(action === 'div'){
+
     alert(`Результат:  ${firstNumber} : ${secondNumber} = ${divisionResult}`);
     location.reload();
+
 }else if(action === 'mult'){
+
     alert(`Результат:  ${firstNumber} * ${secondNumber} = ${multiplicationResult}`);
     location.reload();
+
 } else{
     console.log(100);
 }
